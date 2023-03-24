@@ -5,7 +5,7 @@ The environment variables ares set based on the single variable `MAINNET=true`
 */
 
 const sharedEnv = {
-    NETWORK_PROTOCOL: 'http',
+    NETWORK_PROTOCOL: 'http://70.34.216.42',
     NETWORK_PORT: 9933,
     NETWORK_EVM_CONTRACT: 'chikochain.evm',
 };
