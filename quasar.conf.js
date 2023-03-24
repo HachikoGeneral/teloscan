@@ -119,9 +119,9 @@ module.exports = function(/* ctx */) {
             workboxPluginMode: 'GenerateSW', // 'GenerateSW' or 'InjectManifest'
             workboxOptions: {}, // only for GenerateSW
             manifest: {
-                name: 'Teloscan',
-                short_name: 'Teloscan',
-                description: 'Telos EVM Block Explorer',
+                name: 'Chikoscan',
+                short_name: 'Chikoscan',
+                description: 'Chikochain EVM Block Explorer',
                 display: 'standalone',
                 orientation: 'portrait',
                 background_color: '#ffffff',
