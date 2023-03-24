@@ -9,7 +9,7 @@ const switchEthereumChain = async () => {
     if (provider){
         const chainId = parseInt(process.env.NETWORK_EVM_CHAIN_ID, 10);
         const chainIdParam = `0x${chainId.toString(16)}`
-        const mainnet = chainId === 40;
+        const mainnet = chainId === 42;
         try {
             await provider.request({
                 method: 'wallet_switchEthereumChain',
@@ -23,10 +23,10 @@ const switchEthereumChain = async () => {
                         method: 'wallet_addEthereumChain',
                         params: [{
                             chainId: chainIdParam,
-                            chainName: `Telos EVM ${mainnet ? 'Mainnet' : 'Testnet'}`,
+                            chainName: `Chikochain EVM ${mainnet ? 'Mainnet' : 'Testnet'}`,
                             nativeCurrency: {
-                                name: `Telos`,
-                                symbol: `TLOS`,
+                                name: `Chiko Token`,
+                                symbol: `CHK`,
                                 decimals: 18,
                             },
                             rpcUrls: [`https://${mainnet ? 'mainnet' : 'testnet'}.telos.net/evm`],
@@ -59,7 +59,7 @@ const addNetwork = async () => {
     if (provider) {
         const chainId = parseInt(process.env.NETWORK_EVM_CHAIN_ID, 10);
         const chainIdParam = `0x${chainId.toString(16)}`
-        const mainnet = chainId === 40;
+        const mainnet = chainId === 42;
         try {
             await provider.request({
                 method: "wallet_addEthereumChain",
@@ -67,9 +67,9 @@ const addNetwork = async () => {
                     chainId: chainIdParam,
                     chainName: `Telos EVM ${mainnet ? 'Mainnet' : 'Testnet'}`,
                     nativeCurrency: {
-                        name: `Telos`,
-                        symbol: `TLOS`,
-                        decimals: 18,
+                                name: `Chiko Token`,
+                                symbol: `CHK`,
+                                decimals: 18,
                     },
                     rpcUrls: [`https://${mainnet ? 'mainnet' : 'testnet'}.telos.net/evm`],
                     blockExplorerUrls: [`https://${mainnet ? '' : 'testnet.'}teloscan.io`],
